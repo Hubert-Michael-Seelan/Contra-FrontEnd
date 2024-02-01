@@ -14,7 +14,7 @@ const LoginSignUp = () => {
     const login = async() =>{
       console.log("Login Successfully", formData);
       let responseData;
-      await fetch("http://localhost:4000/login",{
+      await fetch("https://contra-backend.onrender.com/login",{
         method: "POST",
         headers:{
           Accept: "application/form-data",
@@ -35,7 +35,7 @@ const LoginSignUp = () => {
     const signup = async() =>{
       console.log("Registered Successfully", formData);
       let responseData;
-      await fetch("http://localhost:4000/signup",{
+      await fetch("https://contra-backend.onrender.com/signup",{
         method: "POST",
         headers:{
           Accept: "application/form-data",
