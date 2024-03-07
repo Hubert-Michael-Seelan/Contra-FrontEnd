@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  font-weight: 700;
+}
+.wrapper h1{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wrapper form {
+  padding: 2.5rem 3rem;
+  background: blanchedalmond;
+  border-radius: 10px;
+}
+.wrapper label{
+  margin-right: 50%;
+}
+.wrapper input{
+  height: 20px;
+}
+.wrapper select{
+  height: 40px;
+}
+#address{
+  height: 25px;
+  width: 300px;
+}
+.wrapper form .btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  color: rgb(46, 10, 10);
+  margin-top: 2rem;
+  height: 30px;
+  cursor: pointer;
+}
+.wrapper form a {
+  font-size: 0.9rem;
+  color: grey;
+}

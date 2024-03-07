@@ -2,13 +2,19 @@ import React, { useContext } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
+import { useNavigate } from "react-router-dom";
 
 
 
 const CartItems = () => {
   const {all_product, cartItems, removeFromCart, getTotalCartAmount} = useContext(ShopContext);
+  const navigate = useNavigate();
   const handleCheckout = () => {
-      alert("Your Cart is Empty");
+   if(getTotalCartAmount() === 0){
+    alert("Your Cart is Empty")
+   }else{
+    navigate("/checkout")
+   }
   }
   return (
     <div className="cartitems">
