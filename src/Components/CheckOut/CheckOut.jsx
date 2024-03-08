@@ -8,7 +8,7 @@ const CheckOut = () => {
   const {removeFromCart} = useContext(ShopContext);
   const navigate = useNavigate();
   const handleSubmit =()=> {
-    navigate("/confirm") || removeFromCart(null) ;
+    navigate("/confirm") && removeFromCart() ;
   }
   const countryList = Object.values(countries);
   return (
