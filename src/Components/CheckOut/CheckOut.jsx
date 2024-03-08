@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./CheckOut.css";
 import { countries } from "countries-list";
 import { useNavigate } from "react-router-dom";
-import { ShopContext } from "../../Context/ShopContext";
 
 const CheckOut = () => {
-  const {removeFromCart} = useContext(ShopContext);
   const navigate = useNavigate();
   const handleSubmit =()=> {
-    navigate("/confirm") && removeFromCart() ;
+    alert("Your Order Placed Successfully");
   }
   const countryList = Object.values(countries);
   return (
