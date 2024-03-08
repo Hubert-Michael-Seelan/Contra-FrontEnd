@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./CheckOut.css";
 import { countries } from "countries-list";
+import { useNavigate } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const CheckOut = () => {
-  const handleSubmit = alert("Order Placed Successfully");
+  const {removeFromCart} = useContext(ShopContext);
+  const navigate = useNavigate();
+  const handleSubmit =()=> {
+    navigate("/confirm") || removeFromCart(null) ;
+  }
   const countryList = Object.values(countries);
   return (
     <div className="row wrapper">
