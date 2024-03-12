@@ -1,12 +1,13 @@
 import React from "react";
 import "./CheckOut.css";
 import { countries } from "countries-list";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CheckOut = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleSubmit =()=> {
-    alert("Your Order Placed Successfully");
+    // alert("Your Order Placed Successfully");
+    navigate("/confirm")
   }
   const countryList = Object.values(countries);
   return (

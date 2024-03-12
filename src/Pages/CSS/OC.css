@@ -1,10 +1,26 @@
+.OC{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .OC h1{
   text-align: center;
   color: red;
   margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 .OC h4{
   text-align: center;
   color: black;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+}
+.OC button{
+  color: red;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 30px;
+  border: 1px solid red;
+  margin-bottom: 5rem;
 }
