@@ -4,13 +4,13 @@ import "./CSS/OC.css"
 // import { ShopContext } from '../Context/ShopContext';
 
 const OrderConfirmed = () => {
-  // const {getTotalCartItems} = useContext(ShopContext);
+  // const {removeFromCart} = useContext(ShopContext);
 
   // useEffect(() => {
-  //   getTotalCartItems([])
+  //   removeFromCart([])
   // },[])
   const navigate = useNavigate();
-  const goBack = () => navigate("/")
+  const goBack = () => navigate("/");
   return (
     <div className='OC'>
       <h1>Your Order is Confirmed</h1>
