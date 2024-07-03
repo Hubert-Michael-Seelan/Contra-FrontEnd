@@ -14,25 +14,36 @@ import CheckOut from "./Components/CheckOut/CheckOut";
 import OrderConfirmed from "./Pages/OrderConfirmed";
 
 function App() {
-  return <div>
-    <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Shop />} />
-      <Route path="/men" element={<ShopCategory banner={men_banner} category="men" />} />
-      <Route path="/women" element={<ShopCategory banner={women_banner} category="women"/>} />
-      <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid"/>} />
-      <Route path="/product" element={<Product />}> 
-      <Route path=":productId" element={<Product />} />
-      </Route>
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout" element={<CheckOut />} />
-      <Route path="/confirm" element={<OrderConfirmed />} />
-      <Route path="/login" element={<LoginSignUp />} />
-    </Routes>
-    <Footer />
-    </BrowserRouter>
-  </div>;
+  return (
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Shop />} />
+          <Route
+            path="/men"
+            element={<ShopCategory banner={men_banner} category="men" />}
+          />
+          <Route
+            path="/women"
+            element={<ShopCategory banner={women_banner} category="women" />}
+          />
+          <Route
+            path="/kids"
+            element={<ShopCategory banner={kid_banner} category="kid" />}
+          />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
+          </Route>
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/confirm" element={<OrderConfirmed />} />
+          <Route path="/login" element={<LoginSignUp />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
